@@ -7,4 +7,10 @@ const store = configureStore({
     }
 });
 
+store.subscribe(() => {
+    const state = store.getState();
+    const data = JSON.stringify(state);
+    localStorage.setItem('react-redux', data);
+});
+
 export default store;

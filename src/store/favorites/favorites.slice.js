@@ -6,6 +6,9 @@ const itemsSlice = createSlice({
   name: 'favorites',
   initialState,
   reducers: {
+    init: (state, action) => {
+      return action.payload;
+    },
     add: (state, action) => {
       const item = action.payload;
       return [...state, item.id];
